@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './styles/globalStyle.css';
+
+import SideBarComponent from './components/SideBar/SideBarComponent';
+import HomeComponent from './components/Home/HomeComponent';
+import StoreComponent from './components/Store/StoreComponent';
+// import CartComponent from './components/SideBar/CartComponent';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reloa.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [page, setPage] = useState('home');
+
+    return (
+      <div className="App">
+
+          <SideBarComponent
+            side='left' 
+          />
+          {/* <CartComponent /> */}
+
+          {
+          page === 'home' ?
+              <HomeComponent />:
+          page === 'store' ?
+              <StoreComponent />:
+              <HomeComponent />
+          }
+
+          <SideBarComponent 
+              side='right'
+              onClickCart={() => {}}
+              onClickHome={() => setPage('home')}
+              onClickStore={() => setPage('store')}
+              onClickHelp={() => {}} 
+          />
+
+      </div>
+    );
 }
 
 export default App;

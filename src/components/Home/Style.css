@@ -1,0 +1,160 @@
+@import '../../styles/keyframes.css';
+
+.home__container{
+    position: relative;
+
+    height: 100vh;
+    width: 90vw;
+    
+    margin: auto;
+
+    overflow: hidden;
+}
+.home__wrapperMain{
+
+    display: flex;
+    align-items: center;
+
+    height: 100vh;
+
+    margin-left: 2%;
+}
+
+.home__main{
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    
+    height: 85vh;
+    width: 80vw;
+
+    margin-top: -30px;
+
+    background-color: #680F0F;
+
+    user-select: none;
+
+    animation: main 3s 0s normal forwards;
+
+}
+
+.home__main > p {
+    margin: 0;
+
+    padding: 10px;
+
+    color: #500505;
+
+    font-family: 'Impact';
+    line-height: 18vw;
+    font-size: 18vw;
+    word-wrap: wrap;
+    
+}
+
+.home__main > img{
+    position: absolute;
+    right: -33%;
+
+    max-width: 100%;
+
+    margin-top: 13%;
+
+    user-select: none;
+
+    animation: mainImg 3s 0s normal forwards;
+
+}
+
+.home__slogan{
+    width: 400px;
+    height: 21vw;
+
+    margin-right: 15%;
+    margin-top: 10px;
+
+    border-top-left-radius: 100px;
+
+    background-color: #680F0F;
+    z-index: 10;
+    
+    animation: mainSlogan 3s 0s normal forwards;
+}
+
+.home__slogan > h2{
+    margin: 0;
+
+    padding: 30px;
+
+    color: #fff;
+
+    font-family: 'Arial';
+    word-wrap: wrap;
+    font-weight: bold;
+    font-size: 4vw;
+    
+    user-select: none;
+}
+
+.home__wrapperLogo{
+    display: flex;
+    align-self: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.home__wrapperLogo > img{
+    max-width: 250px;
+
+    align-self: center;
+
+    margin: 10px 0px 00px 20px;
+
+    user-select: none;
+    animation: mainImg 3s 0s normal forwards;
+}
+
+.home__price{
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 20px 30px 20px 30px;
+
+    border-radius: 20px;
+
+    margin-bottom: 10px;
+
+    background-color: #500505;
+
+    animation: mainSlogan 3s 0s normal forwards;
+}
+
+.home__price > p{
+    margin: 0;
+
+    color: #fff;
+
+    font-family: 'Arial';
+    word-wrap: wrap;
+    font-size: 1vw;
+    
+    user-select: none;
+}
+
+.home__price > h4{
+    margin: 0px 0px 0px 10px;
+
+    color: #fff;
+
+    font-family: 'Arial';
+    word-wrap: wrap;
+    font-weight: bold;
+    font-size: 3vw;
+    
+    user-select: none;
+}

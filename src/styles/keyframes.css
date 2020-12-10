@@ -1,0 +1,38 @@
+@keyframes main{
+    from{
+        transform: translate(-50%, -50%);
+    }
+    to{
+        transform: translate(-0%, -0%);
+    }
+}
+
+@keyframes mainImg{
+    from{
+        transform: translate(200%);
+    }
+    to{
+        transform: translate(0%);
+    }
+}
+
+@keyframes mainSlogan{
+    from{
+        transform: translateY(200%);
+    }
+    to{
+        transform: translate(0%);
+    }
+}
+
+@keyframes mainPrice{
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translate(0%);
+    }
+}
+
+
+

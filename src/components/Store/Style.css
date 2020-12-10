@@ -1,0 +1,32 @@
+.SideBar__container{
+    position: fixed;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    width: 5vw;
+    height: 100vh;
+
+}
+
+.SideBar__list{
+    list-style-type: none;
+    padding: 0;
+}
+
+.SideBar__list > li{
+    margin-bottom: 4vh;
+}
+
+.SideBar__buttom{
+    cursor: pointer;
+    transition: 100ms linear all;
+}
+
+.SideBar__buttom > *:hover {
+    transform: rotateZ(-18deg);
+    transition: 100ms linear all;
+}
