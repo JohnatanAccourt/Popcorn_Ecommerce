@@ -36,7 +36,10 @@
     user-select: none;
 
     animation: main 3s 0s normal forwards;
+}
 
+.home--mainOFF{
+    animation: mainOFF 3s 0s normal forwards;
 }
 
 .home__main > p {
@@ -67,6 +70,10 @@
 
 }
 
+.home--mainOFF > img{
+    animation: mainImgOFF 3s 0s normal forwards;
+}
+
 .home__slogan{
     width: 400px;
     height: 21vw;
@@ -80,6 +87,10 @@
     z-index: 10;
     
     animation: mainSlogan 3s 0s normal forwards;
+}
+
+.home--sloganOFF{
+    animation: mainSloganOFF 3s 0s normal forwards;
 }
 
 .home__slogan > h2{
@@ -115,6 +126,10 @@
     animation: mainImg 3s 0s normal forwards;
 }
 
+.home--wrapperLogoOFF > img {
+    animation: mainImgOFF 3s 0s normal forwards;
+}
+
 .home__price{
     position: absolute;
     bottom: 0;
@@ -132,6 +147,10 @@
     background-color: #500505;
 
     animation: mainSlogan 3s 0s normal forwards;
+}
+
+.home--priceOFF{
+    animation: mainSloganOFF 3s 0s normal forwards;
 }
 
 .home__price > p{

@@ -1,32 +1,44 @@
-.SideBar__container{
-    position: fixed;
+@import '../../styles/keyframes.css';
+
+.store__container:{
+    position: relative;
 
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
 
-    width: 5vw;
     height: 100vh;
+    width: 100vw;
 
+    overflow: hidden;
 }
 
-.SideBar__list{
-    list-style-type: none;
-    padding: 0;
+.store__background{
+    position: absolute;
+    right: 0;
+
+    height: 100vh;
+    width: 50vw;
+
+    background-color: #8A2222;
+    animation: bg 3s 0s normal forwards;
 }
 
-.SideBar__list > li{
-    margin-bottom: 4vh;
+.store--backgroundOFF{
+    animation: bgOFF 3s 0s normal forwards;
 }
 
-.SideBar__buttom{
-    cursor: pointer;
-    transition: 100ms linear all;
+.store__backgroundTriangle{
+    position: absolute;
+    bottom: 0;
+
+    height: 50vh;
+    width: 100%;
+
+    background-color: #680F0F;
+    clip-path: polygon(50% 0%, -50% 100%, 150% 100%);
+    animation: triangleAnima 3s 0s normal forwards;
 }
 
-.SideBar__buttom > *:hover {
-    transform: rotateZ(-18deg);
-    transition: 100ms linear all;
+.store--backgroundTriangleOFF{
+    animation: triangleAnimaOFF 3s 0s normal forwards;
 }

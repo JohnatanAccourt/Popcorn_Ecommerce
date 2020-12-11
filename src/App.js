@@ -7,8 +7,15 @@ import StoreComponent from './components/Store/StoreComponent';
 // import CartComponent from './components/SideBar/CartComponent';
 
 function App() {
+    const [page, setPage] = useState('store');
+    const [homeAnimation, setHomeAnimation] = useState(false);
+    const [storeAnimation, setStoreAnimation] = useState(false);
+    const [helpAnimation, setHelpAnimation] = useState(false);
 
-    const [page, setPage] = useState('home');
+    function handleAnimation(){
+        setHomeAnimation(!homeAnimation);
+        setStoreAnimation(!storeAnimation);
+    }
 
     return (
       <div className="App">
@@ -20,17 +27,17 @@ function App() {
 
           {
           page === 'home' ?
-              <HomeComponent />:
+              <HomeComponent animationOn={homeAnimation} />:
           page === 'store' ?
-              <StoreComponent />:
+              <StoreComponent animationOn={storeAnimation} />:
               <HomeComponent />
           }
 
           <SideBarComponent 
               side='right'
               onClickCart={() => {}}
-              onClickHome={() => setPage('home')}
-              onClickStore={() => setPage('store')}
+              onClickHome={() => [setTimeout(() => {setPage('home')}, 2500) , handleAnimation()]}
+              onClickStore={() => [setTimeout(() => {setPage('store')}, 2500), handleAnimation()]}
               onClickHelp={() => {}} 
           />
 

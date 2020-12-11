@@ -3,8 +3,11 @@ import React from 'react';
 
 import './Style.css';
 
-export default function StoreComponent(){
+export default function StoreComponent({animationOn}){
     return(
-        <div>Este e a loja</div>
+        <section className="store__container">
+            <div className={!animationOn ? "store__background" : "store__background store--backgroundOFF"}></div>
+            <div className={!animationOn ? "store__backgroundTriangle" : "store__backgroundTriangle store--backgroundTriangleOFF"}></div>
+        </section> 
     )
 }

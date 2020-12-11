@@ -1,9 +1,18 @@
 @keyframes main{
     from{
-        transform: translate(-50%, -50%);
+        transform: translate(-150%, -150%);
     }
     to{
         transform: translate(-0%, -0%);
+    }
+}
+
+@keyframes mainOFF{
+    from{
+        transform: translate(-0%, -0%);
+    }
+    to{
+        transform: translate(-150%, -150%);
     }
 }
 
@@ -16,23 +25,68 @@
     }
 }
 
+@keyframes mainImgOFF{
+    from{
+        transform: translate(0%);
+    }
+    to{
+        transform: translate(200%);
+    }
+}
+
 @keyframes mainSlogan{
     from{
         transform: translateY(200%);
     }
     to{
-        transform: translate(0%);
+        transform: translateY(0%);
     }
 }
 
-@keyframes mainPrice{
+@keyframes mainSloganOFF{
     from{
-        transform: translateX(-100%);
+        transform: translateY(0%);
     }
     to{
-        transform: translate(0%);
+        transform: translateY(200%);
     }
 }
 
 
+
+@keyframes bg{
+    from{
+        transform: translateX(-200%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes bgOFF{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-200%);
+    }
+}
+
+@keyframes triangleAnima{
+    from{
+        transform: translateY(200%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+
+@keyframes triangleAnimaOFF{
+    from{
+        transform: translateY(0%);
+    }
+    to{
+        transform: translateY(200%);
+    }
+}
 
