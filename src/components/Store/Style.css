@@ -12,15 +12,155 @@
     overflow: hidden;
 }
 
+.store__wrapper{
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 100vh;
+    width: 80vw;
+    
+    margin: auto;
+
+    overflow: hidden;
+    z-index: 100000;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+.store__list{
+    width: 30%;
+    height: 90%;
+}
+
+.store__listTitle{
+    margin: 10px 0px;
+    color: #fff;
+
+    font-size: 0.8rem;
+    font-family: 'Arial';
+}
+
+.alignCenter{
+    text-align: center;
+}
+
+.store__wrapperList{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    height: 85%;
+    width: 100%;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.store__popcorn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 170px;
+    width: 150px;
+
+    margin-bottom: 20px;
+
+    border-radius: 20px;
+
+    background-color: #500505;
+
+    cursor: pointer;
+}
+
+.store__popcorn > img{
+    max-width: 90%;
+
+    user-select: none;
+}
+
+.store__popcorn > p{
+    margin: 5px 0px;
+    color: #fff;
+
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: 'Arial';
+}
+
+.store__popcornImage > img{
+    max-height: 70vh;
+
+    user-select: none;
+}
+
+.store__desc{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    /* justify-content: space-evenly; */
+}
+
+.store__desc > div{
+    margin-right: 4%;
+}
+
+.store__desc > div > p{
+    width: 80%;
+
+    text-align: center;
+    font-size: 1rem;
+}
+
+.store__icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 70px;
+    height: 70px;
+
+    border-radius: 100px;
+    border-color: #680F0F;
+    border-style: solid;
+    border-width: 5px;
+
+    background-color: #530606;
+}
+
+.store__list > h5{
+    margin: 5% 0px;
+    color: #fff;
+
+    font-size: 4.4rem;
+    font-weight: bold;
+    font-family: 'Impact';
+}
+
+
+
+
+
 .store__background{
     position: absolute;
     right: 0;
+    top: 0;
 
     height: 100vh;
     width: 50vw;
 
     background-color: #8A2222;
     animation: bg 3s 0s normal forwards;
+    z-index: -1;
 }
 
 .store--backgroundOFF{
@@ -37,6 +177,7 @@
     background-color: #680F0F;
     clip-path: polygon(50% 0%, -50% 100%, 150% 100%);
     animation: triangleAnima 3s 0s normal forwards;
+    z-index: -1;
 }
 
 .store--backgroundTriangleOFF{
