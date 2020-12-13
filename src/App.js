@@ -7,7 +7,7 @@ import StoreComponent from './components/Store/StoreComponent';
 // import CartComponent from './components/SideBar/CartComponent';
 
 function App() {
-    const [page, setPage] = useState('home');
+    const [page, setPage] = useState('store');
     const [homeAnimation, setHomeAnimation] = useState(false);
     const [storeAnimation, setStoreAnimation] = useState(false);
     const [helpAnimation, setHelpAnimation] = useState(false);

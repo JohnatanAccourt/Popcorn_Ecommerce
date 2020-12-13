@@ -37,6 +37,12 @@
 .store__list{
     width: 30%;
     height: 90%;
+
+    animation: lists 2s 0s normal forwards;
+}
+
+.store__listOFF{
+    animation: listsOFF 2s 0s normal forwards;
 }
 
 .store__listTitle{
@@ -87,7 +93,7 @@
     user-select: none;
 }
 
-.store__popcorn > p{
+.store__popcorn > strong{
     margin: 5px 0px;
     color: #fff;
 
@@ -100,6 +106,11 @@
     max-height: 70vh;
 
     user-select: none;
+    animation: animation 3s 0s normal forwards;
+}
+
+.store__popcornImageOFF > img{
+    animation: animationOFF 3s 0s normal forwards;
 }
 
 .store__desc{
@@ -111,11 +122,16 @@
 }
 
 .store__desc > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
     margin-right: 4%;
 }
 
 .store__desc > div > p{
-    width: 80%;
+    width: 90%;
 
     text-align: center;
     font-size: 1rem;
@@ -137,6 +153,14 @@
     background-color: #530606;
 }
 
+.store__iconText{
+    margin: 5% 0px;
+    color: #fff;
+
+    font-size: 0.7rem;
+    font-family: 'Impact';
+}
+
 .store__list > h5{
     margin: 5% 0px;
     color: #fff;
@@ -145,6 +169,104 @@
     font-weight: bold;
     font-family: 'Impact';
 }
+
+.store__counterTitle{
+    margin: 5% 0px 3% 0;
+    color: #fff;
+
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: 'Impact';
+}
+
+.store__counter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.store__wrapperCounter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #fff;
+
+    border-radius: 10px;
+}
+
+.store__wrapperCounter button{
+    background-color: #fff;
+    outline: none;
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.store__wrapperCounter p{
+    margin: 8% 0px;
+    color: #530606;
+
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Impact';
+}
+
+.store__wrapperValue{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+    margin: 8% 0 8% 0;
+}
+
+.store__wrapperValue p{
+    margin: 0;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Impact';
+}
+
+.store__wrapperValue strong{
+    margin: 2% 0;
+    color: #fff;
+
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: 'Impact';
+}
+
+.store__buttonConfirm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    border-radius: 20px;
+    border: none;
+    
+    outline: none;
+    background-color: green;
+    cursor: pointer;
+}
+
+.store__buttonConfirm p{
+    color: #fff;
+
+    font-size: 1rem;
+    font-family: 'Arial';
+}
+
+
+
+
+
+
 
 
 

@@ -90,3 +90,39 @@
     }
 }
 
+@keyframes lists{
+    from{
+        transform: translateX(400%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes listsOFF{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(400%);
+    }
+}
+
+@keyframes animation{
+    from{
+        transform: translateY(-200%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+
+@keyframes animationOFF{
+    from{
+        transform: translateY(0%);
+    }
+    to{
+        transform: translateY(-200%);
+    }
+}
+
