@@ -8,10 +8,9 @@ import Add from '@material-ui/icons/AddCircle';
 import Remove from '@material-ui/icons/RemoveCircle';
 import Cart from '@material-ui/icons/AddShoppingCart';
 
-
 import './Style.css';
 
-export default function StoreComponent({animationOn}){
+export default function StoreComponent({ animationOn }){
     return(
         <section className="store__container">
             <main className="store__wrapper">
@@ -58,24 +57,29 @@ export default function StoreComponent({animationOn}){
                 <div className={!animationOn ? "store__list" : "store__list store__listOFF"}>
                     <h5>Melancia</h5>
                     <div className="store__desc">
-                        <div>
+                        <label className="store__radio">
+                            <input type="checkbox" />
                             <span className="store__icon">
                                 <img src={bucket} alt="bucket" style={{ width: 15 }} />
                             </span>
-                            <p className="store__iconText">Pequeno 330g</p>
-                        </div>
-                        <div>
+                            <p className="store__iconText">Pequeno 222g</p>
+                        </label>
+
+                        <label className="store__radio">
+                            <input type="checkbox" />
                             <span className="store__icon">
                                 <img src={bucket} alt="bucket" style={{ width: 20 }} />
                             </span>
-                            <p className="store__iconText">Médio 330g</p>
-                        </div>
-                        <div>
+                            <p className="store__iconText">Médio 222g</p>
+                        </label>
+
+                        <label className="store__radio">
+                            <input type="checkbox" />
                             <span className="store__icon">
                                 <img src={bucket} alt="bucket" style={{ width: 30 }} />
                             </span>
-                            <p className="store__iconText">Grande 330g</p>
-                        </div>
+                            <p className="store__iconText">Grande 222g</p>
+                        </label>
                     </div>
                     
                     <p className="store__counterTitle">Quantidade:</p>

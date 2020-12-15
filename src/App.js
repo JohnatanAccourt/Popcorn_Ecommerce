@@ -7,14 +7,28 @@ import StoreComponent from './components/Store/StoreComponent';
 // import CartComponent from './components/SideBar/CartComponent';
 
 function App() {
-    const [page, setPage] = useState('store');
+    const [page, setPage] = useState('home');
     const [homeAnimation, setHomeAnimation] = useState(false);
     const [storeAnimation, setStoreAnimation] = useState(false);
     const [helpAnimation, setHelpAnimation] = useState(false);
 
-    function handleAnimation(){
-        setHomeAnimation(!homeAnimation);
-        setStoreAnimation(!storeAnimation);
+    function handleAnimation(pg){
+        switch(pg){
+            case('store'):
+                setStoreAnimation(false);
+                setHomeAnimation(true);
+                break;
+
+            case('home'):
+                setStoreAnimation(true);
+                setHomeAnimation(false);
+                break;
+
+            default:
+                setStoreAnimation(false);
+                setHomeAnimation(false);
+                break;
+        }
     }
 
     return (
@@ -25,8 +39,7 @@ function App() {
           />
           {/* <CartComponent /> */}
 
-          {
-          page === 'home' ?
+          {page === 'home' ?
               <HomeComponent animationOn={homeAnimation} />:
           page === 'store' ?
               <StoreComponent animationOn={storeAnimation} />:
@@ -36,8 +49,8 @@ function App() {
           <SideBarComponent 
               side='right'
               onClickCart={() => {}}
-              onClickHome={() => [setTimeout(() => {setPage('home')}, 2500) , handleAnimation()]}
-              onClickStore={() => [setTimeout(() => {setPage('store')}, 2500), handleAnimation()]}
+              onClickHome={() => [setTimeout(() => {setPage('home')}, 2500) , handleAnimation('home')]}
+              onClickStore={() => [setTimeout(() => {setPage('store')}, 2500), handleAnimation('store')]}
               onClickHelp={() => {}} 
           />
 
