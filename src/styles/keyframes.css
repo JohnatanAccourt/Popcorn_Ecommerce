@@ -1,128 +1,103 @@
+/* Page transition */
+
 @keyframes main{
-    from{
-        transform: translate(-150%, -150%);
-    }
-    to{
-        transform: translate(-0%, -0%);
-    }
+    from{ transform: translate(-150%, -150%) }
+    to{ transform: translate(-0%, -0%)}
 }
 
 @keyframes mainOFF{
-    from{
-        transform: translate(-0%, -0%);
-    }
-    to{
-        transform: translate(-150%, -150%);
-    }
+    from{ transform: translate(-0%, -0%) }
+    to{ transform: translate(-150%, -150%) }
 }
 
 @keyframes mainImg{
-    from{
-        transform: translate(200%);
-    }
-    to{
-        transform: translate(0%);
-    }
+    from{ transform: translate(200%) }
+    to{ transform: translate(0%) }
 }
 
 @keyframes mainImgOFF{
-    from{
-        transform: translate(0%);
-    }
-    to{
-        transform: translate(200%);
-    }
+    from{ transform: translate(0%) }
+    to{ transform: translate(200%) }
 }
 
 @keyframes mainSlogan{
-    from{
-        transform: translateY(200%);
-    }
-    to{
-        transform: translateY(0%);
-    }
+    from{ transform: translateY(200%) }
+    to{ transform: translateY(0%) }
 }
 
 @keyframes mainSloganOFF{
-    from{
-        transform: translateY(0%);
-    }
-    to{
-        transform: translateY(200%);
-    }
+    from{ transform: translateY(0%) }
+    to{ transform: translateY(200%) }
 }
 
-
-
 @keyframes bg{
-    from{
-        transform: translateX(-200%);
-    }
-    to{
-        transform: translateX(0%);
-    }
+    from{ transform: translateX(-200%) }
+    to{ transform: translateX(0%) }
 }
 
 @keyframes bgOFF{
-    from{
-        transform: translateX(0%);
-    }
-    to{
-        transform: translateX(-200%);
-    }
+    from{ transform: translateX(0%) }
+    to{ transform: translateX(-200%) }
 }
 
 @keyframes triangleAnima{
-    from{
-        transform: translateY(200%);
-    }
-    to{
-        transform: translateY(0%);
-    }
+    from{ transform: translateY(200%) }
+    to{ transform: translateY(0%) }
 }
 
 @keyframes triangleAnimaOFF{
-    from{
-        transform: translateY(0%);
-    }
-    to{
-        transform: translateY(200%);
-    }
+    from{ transform: translateY(0%) }
+    to{ transform: translateY(200%) }
 }
 
 @keyframes lists{
-    from{
-        transform: translateX(400%);
-    }
-    to{
-        transform: translateX(0%);
-    }
+    from{ transform: translateX(400%) }
+    to{ transform: translateX(0%) }
 }
 
 @keyframes listsOFF{
-    from{
-        transform: translateX(0%);
-    }
-    to{
-        transform: translateX(400%);
-    }
+    from{ transform: translateX(0%) }
+    to{ transform: translateX(400%) }
 }
 
 @keyframes animation{
-    from{
-        transform: translateY(-200%);
-    }
-    to{
-        transform: translateY(0%);
-    }
+    from{ transform: translateY(-200%) }
+    to{ transform: translateY(0%) }
 }
 
 @keyframes animationOFF{
-    from{
-        transform: translateY(0%);
+    from{ transform: translateY(0%) }
+    to{ transform: translateY(-200%) }
+}
+
+/* Page transition end */
+
+@keyframes btnAnimation{
+    0%{
+        box-shadow:
+        0 0 2px 5px green,
+        0 0 7px 8px #00531c;
     }
-    to{
-        transform: translateY(-200%);
+
+    50%{
+        box-shadow:
+        0 0 5px 5px green,
+        0 0 2px 5px #00531c;
+    }
+
+    100%{
+        box-shadow:
+        0 0 2px 5px green,
+        0 0 7px 8px #00531c;
     }
 }
 
+@keyframes showModal{
+    from{ transform: translateX(-70%) }
+    to{ transform: translateX(0%) }
+}
+
+@keyframes bgShow{
+    from{ background-color: rgba(0, 0, 0, 0) } 
+    to{ background-color: rgba(0, 0, 0, 0.5) }
+}
