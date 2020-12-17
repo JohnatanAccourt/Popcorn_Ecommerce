@@ -1,7 +1,7 @@
 import React from 'react';
 import './Style.css';
 import Popcorn from '../../assets/toppng.com-popcorn-1536x1221.png';
-import Logo from '../../assets/pipoca.png';
+import Logo from '../../assets/pipoca.png'; 
 
 export default function HomeComponent({animationOn}){
     return(

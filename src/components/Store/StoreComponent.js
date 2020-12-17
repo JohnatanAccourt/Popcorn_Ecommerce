@@ -48,13 +48,13 @@ export default function StoreComponent({ animationOn }){
                         </div>
                     </div>
                     <p className="store__listTitle alignCenter">Role para baixo para ver mais</p>
-                </div>
+                </div> 
 
                 <div className={!animationOn ? "store__popcornImage": "store__popcornImage store__popcornImageOFF"}>
                     <img src={popcorn} alt="popcorn image"  />
                 </div>
                 
-                <div className={!animationOn ? "store__list" : "store__list store__listOFF"}>
+                <div className={!animationOn ? "store__list store__listResponsive" : "store__list store__listOFF store__listResponsive"}>
                     <h5>Melancia</h5>
                     <div className="store__desc">
                         <label className="store__radio">

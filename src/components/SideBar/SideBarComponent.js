@@ -1,13 +1,15 @@
 import React from 'react';
 import LogoFacebook from 'react-ionicons/lib/LogoFacebook';
 import LogoInstagram from 'react-ionicons/lib/LogoInstagram';
-import LogoGithub from 'react-ionicons/lib/LogoGithub';
+import LogoSnapchat from 'react-ionicons/lib/LogoSnapchat';
 import MdMail from 'react-ionicons/lib/MdMail';
 
 import MdCart from 'react-ionicons/lib/MdCart';
 import MdHome from 'react-ionicons/lib/MdHome';
 import Store from '@material-ui/icons/Store';
 import IosHelpCircle from 'react-ionicons/lib/IosHelpCircle';
+
+import Logo from '../../assets/pipoca.png';
 
 
 import './Style.css';
@@ -24,8 +26,7 @@ export default function SideBarComponent(
 
     return(
         <nav 
-            className={'SideBar__container'} 
-            style={side === 'left' ? { left:0 } : { right:0 }}
+            className={side === 'left' ? 'SideBar__containerLeft' : 'SideBar__containerRight'} 
         >
             <ul className='SideBar__list'>
                 {side === 'left' ?
@@ -47,7 +48,7 @@ export default function SideBarComponent(
                         </li>
                         <li>
                             <buttom className='SideBar__buttom'>
-                                <LogoGithub fontSize='40' color="#fff" style={{transition: '0.2s'}} />
+                                <LogoSnapchat fontSize='40' color="#fff" style={{transition: '0.2s'}} />
                             </buttom>
                         </li>
                     </>
@@ -61,6 +62,11 @@ export default function SideBarComponent(
                         <li>
                             <buttom className='SideBar__buttom' onClick={onClickHome}>
                                 <MdHome fontSize='40' color="#fff" style={{transition: '0.2s'}} />
+                            </buttom>
+                        </li>
+                        <li>
+                            <buttom className='SideBar__buttom' onClick={onClickHome}>
+                                <img className="home__logo" src={Logo} alt="logo" />
                             </buttom>
                         </li>
                         <li>

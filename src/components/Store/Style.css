@@ -1,6 +1,6 @@
 @import '../../styles/keyframes.css';
 
-.store__container:{
+.store__container{
     position: relative;
 
     display: flex;
@@ -19,14 +19,16 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 
     height: 100vh;
-    width: 80vw;
+    width: 90vw;
     
     margin: auto;
 
     overflow: hidden;
     z-index: 100000;
+    overflow-y: scroll;
 }
 
 ::-webkit-scrollbar {
@@ -51,6 +53,7 @@
 
     font-size: 0.8rem;
     font-family: 'Arial';
+    text-align: center;
 }
 
 .alignCenter{
@@ -136,8 +139,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-
-    /* justify-content: space-evenly; */
+    /* flex-wrap: wrap; */
 }
 
 .store__desc > label{
@@ -171,7 +173,7 @@
 
     font-size: 1rem;
     font-weight: bold;
-    font-family: 'Impact';
+    font-family: 'Arial';
 }
 
 .store__counter{
@@ -345,4 +347,81 @@
 
 .store--backgroundTriangleOFF{
     animation: triangleAnimaOFF 3s 0s normal forwards;
+}
+
+@media(max-width: 1040px){
+    .store__listResponsive{
+        width: 100%;
+    }
+    .store__list > h5{
+        font-size: 3.3rem;
+    }
+
+    .store__wrapperCounter p{
+        font-size: 1.5rem;
+    }
+    
+    .store__wrapperValue p{
+        font-size: 1.3rem;
+    }
+
+    .store__wrapperValue strong{
+        font-size: 3rem;
+    }
+}
+
+@media(max-width: 700px){
+    .store__popcornImage > img{
+        max-height: 50vh;
+    }
+
+    .store__listTitle{
+        display: none;
+    }
+
+    .store__wrapperList{
+        margin-top: 40%;
+    }
+
+    .alignCenter {
+        margin-bottom: 90%;
+    }
+
+    .store__wrapper{
+        width: 95vw;
+        height: 85vh;
+
+        margin-top: 5%;
+    }
+
+    .store__list > h5{
+        margin: 5% 0px;
+
+        font-size: 2.9rem;
+    }
+
+    .store__desc{
+        justify-content: center;
+    }
+
+    .store__counterTitle{
+        margin-top: 20%;
+        font-size: 0.8rem;
+    }
+
+    .store__wrapperCounter p{
+        font-size: 1rem;
+    }
+    
+    .store__wrapperValue p{
+        font-size: 1rem;
+    }
+
+    .store__wrapperValue strong{
+        font-size: 2.8rem;
+    }
+
+    .store__buttonConfirm{
+        width: 100%;
+    }
 }
