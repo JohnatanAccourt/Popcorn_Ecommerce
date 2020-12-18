@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import popcorn from '../../assets/embalagemPipoca.png';
 import popcornitem from '../../assets/65f725_ec44a29adfb046eaa547a6074981adc2_mv2.png';
@@ -11,6 +11,13 @@ import Cart from '@material-ui/icons/AddShoppingCart';
 import './Style.css';
 
 export default function StoreComponent({ animationOn }){
+    const [radio, setRadio] = useState('option1');
+    const [counter, setCounter] = useState(0);
+
+    function lessItems(){
+        if(counter <= 0){ return } else{ setCounter(counter - 1) }
+    }
+
     return(
         <section className="store__container">
             <main className="store__wrapper">
@@ -51,14 +58,19 @@ export default function StoreComponent({ animationOn }){
                 </div> 
 
                 <div className={!animationOn ? "store__popcornImage": "store__popcornImage store__popcornImageOFF"}>
-                    <img src={popcorn} alt="popcorn image"  />
+                    <img src={popcorn} alt="popcorn image" />
                 </div>
                 
                 <div className={!animationOn ? "store__list store__listResponsive" : "store__list store__listOFF store__listResponsive"}>
                     <h5>Melancia</h5>
                     <div className="store__desc">
                         <label className="store__radio">
-                            <input type="checkbox" />
+                            <input 
+                                type="checkbox"
+                                value='option1' 
+                                checked={radio === 'option1'}
+                                onChange={() => setRadio('option1')} 
+                            />
                             <span className="store__icon">
                                 <img src={bucket} alt="bucket" style={{ width: 15 }} />
                             </span>
@@ -66,7 +78,12 @@ export default function StoreComponent({ animationOn }){
                         </label>
 
                         <label className="store__radio">
-                            <input type="checkbox" />
+                            <input
+                                type="checkbox"
+                                value='option2' 
+                                checked={radio === 'option2'}
+                                onChange={() => setRadio('option2')}
+                            />
                             <span className="store__icon">
                                 <img src={bucket} alt="bucket" style={{ width: 20 }} />
                             </span>
@@ -74,7 +91,12 @@ export default function StoreComponent({ animationOn }){
                         </label>
 
                         <label className="store__radio">
-                            <input type="checkbox" />
+                            <input
+                                type="checkbox"
+                                value='option3' 
+                                checked={radio === 'option3'}
+                                onChange={() => setRadio('option3')}
+                            />
                             <span className="store__icon">
                                 <img src={bucket} alt="bucket" style={{ width: 30 }} />
                             </span>
@@ -85,11 +107,11 @@ export default function StoreComponent({ animationOn }){
                     <p className="store__counterTitle">Quantidade:</p>
                     <div className="store__counter">
                         <div className="store__wrapperCounter">
-                            <button>
+                            <button onClick={() => lessItems()}>
                                 <Remove style={{color: '#530606', fontSize: 30}} />
                             </button>
-                            <p>10</p>
-                            <button>
+                            <p>{counter}</p>
+                            <button onClick={() => setCounter(counter + 1)}>
                                 <Add style={{color: '#530606', fontSize: 30}} />
                             </button>
                         </div>

@@ -14,16 +14,7 @@ import Logo from '../../assets/pipoca.png';
 
 import './Style.css';
 
-export default function SideBarComponent(
-    { 
-        side, 
-        onClickCart, 
-        onClickHome, 
-        onClickStore, 
-        onClickHelp 
-    }
-    ){
-
+export default function SideBarComponent({ side, onClickCart, onClickHome, onClickStore, onClickHelp }){
     return(
         <nav 
             className={side === 'left' ? 'SideBar__containerLeft' : 'SideBar__containerRight'} 

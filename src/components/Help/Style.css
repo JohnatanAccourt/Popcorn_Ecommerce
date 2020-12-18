@@ -1,0 +1,78 @@
+.help__background{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url("../../assets/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+
+    animation: containerAnimation 3s 0s normal forwards;
+    overflow-y: scroll;
+}
+
+.help--backgroundOFF{animation: containerAnimationOFF 3s 0s normal forwards}
+
+.help__Logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+
+    animation: imgAnimation 3s 0s normal forwards;
+}
+
+.help__Logo img{
+    max-width: 100%;
+}
+
+.help--LogoOFF{animation: imgAnimationOFF 3s 0s normal forwards}
+
+.help__desc{
+    width: 50vw;
+    height: 100vh;
+
+    background-color: rgba(128, 20, 20, 0.9);
+
+    animation: descAnimation 3s 0s normal forwards;
+
+}
+
+.help--descOFF{animation: descAnimationOFF 3s 0s normal forwards}
+
+.help__desc h1{
+    width: 80%;
+    margin: 8% auto;
+
+    text-align: center;
+    font-family: 'Impact';
+    font-size: 3rem;
+    color: white;
+}
+
+.help__desc p{
+    width: 80%;
+    margin: 2% auto;
+
+    text-align: left;
+    font-family: 'Arial';
+    color: white;
+}
+
+@media(max-width: 700px){
+    .help__background{
+        flex-direction: column;
+        align-items: center;
+
+        padding: 10% 0;
+    }
+
+    .help__desc{
+        width: 100vw;
+        padding-bottom: 25%;
+    }
+}

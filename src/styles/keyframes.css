@@ -70,6 +70,36 @@
     to{ transform: translateY(-200%) }
 }
 
+@keyframes containerAnimation{
+    from{ transform: translateY(50%); opacity: 0; }
+    to{ transform: translateY(0%); opacity: 1; }
+}
+
+@keyframes containerAnimationOFF{
+    from{ transform: translateY(0%); opacity: 1; }
+    to{ transform: translateY(100%); opacity: 0; }
+}
+
+@keyframes descAnimation{
+    from{ transform: translateX(200%) }
+    to{ transform: translateX(0%) }
+}
+
+@keyframes imgAnimation{
+    from{ transform: translateX(-200%) }
+    to{ transform: translateX(0%) }
+}
+
+@keyframes imgAnimationOFF{
+    from{ transform: translateX(0%) }
+    to{ transform: translateX(-200%) }
+}
+
+@keyframes imgAnimationOFF{
+    from{ transform: translateX(0%) }
+    to{ transform: translateX(-200%) }
+}
+
 /* Page transition end */
 
 @keyframes btnAnimation{
